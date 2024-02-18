@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package license;
+
+message LicenseRequest {
+  string license = 1;
+}
+
+message LicenseResponse {
+  string license = 1;
+  map<string, string> attributes = 2;
+}
+
+service License {
+  rpc RequestLicense(LicenseRequest) returns (LicenseResponse) {}
+}

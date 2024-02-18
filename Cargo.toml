@@ -4,7 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[build-dependencies]
+tonic-build = { version = "0.11.0", features = ["prost"] }
 
 [dependencies]
 lazy_static = { version = "1.4.0" }
 tokio = { version = "1.36.0", features = ["full"] }
+serde = { version = "1.0.196", features = ["derive"] }
+serde_json = { version = "1.0.113" }
+tonic = { version = "0.11.0", features = ["prost"] }
+prost = { version = "0.12.3", features = ["prost-derive"] }

@@ -1,13 +1,16 @@
+use std::any::Any;
 use std::collections::HashMap;
+use serde::{Deserialize, Serialize};
 
-pub trait LicenseItem {
-    fn get_license(self) -> String;
-    fn get_attributes(self) -> HashMap<String, String>;
+#[derive(Debug, Clone)]
+pub struct LicenseItem {
+    pub license: String,
+    pub attributes: HashMap<String, String>
 }
 
-pub trait LicenseRepository<T: LicenseItem> {
-    fn add_license(&mut self, license_item: T);
-    fn delete_license(&mut self, license_item: T);
-    fn get_licenses(self) -> Vec<T>;
-    fn get_license(&self, license: String) -> Option<T>;
+pub trait LicenseRepository {
+    fn add_license(&mut self, license_item: LicenseItem);
+    fn delete_license(&mut self, license_item: LicenseItem);
+    fn get_licenses(self) -> Vec<LicenseItem>;
+    fn get_license(&self, license: String) -> Option<LicenseItem>;
 }
