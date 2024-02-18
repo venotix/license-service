@@ -8,7 +8,6 @@ edition = "2021"
 tonic-build = { version = "0.11.0", features = ["prost"] }
 
 [dependencies]
-lazy_static = { version = "1.4.0" }
 tokio = { version = "1.36.0", features = ["full"] }
 serde = { version = "1.0.196", features = ["derive"] }
 serde_json = { version = "1.0.113" }

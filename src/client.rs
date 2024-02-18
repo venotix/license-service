@@ -1,14 +1,8 @@
-use std::net::ToSocketAddrs;
-use std::sync::Arc;
-use tonic::{Response, Status};
+use tonic::transport::Channel;
 
-use tonic::transport::{Channel, Error, Server};
-
-use crate::licensing::{LicenseItem, LicenseRepository};
+use crate::licensing::LicenseItem;
 use crate::networking::license::license_client::LicenseClient;
-use crate::networking::license::license_server::LicenseServer;
-use crate::networking::license::{LicenseRequest, LicenseResponse};
-use crate::networking::NetworkLicenseServer;
+use crate::networking::license::LicenseRequest;
 
 pub struct LicenseClientBootstrap {
     pub client: LicenseClient<Channel>,

@@ -1,10 +1,10 @@
-use std::collections::HashMap;
 use std::sync::Arc;
+
 use tonic::{Request, Response, Status};
-use crate::licensing::{LicenseItem, LicenseRepository};
-use crate::networking::license::license_server::License;
+
+use crate::licensing::LicenseRepository;
 use crate::networking::license::{LicenseRequest, LicenseResponse};
-use crate::licensing;
+use crate::networking::license::license_server::License;
 
 pub mod license {
     tonic::include_proto!("license");
