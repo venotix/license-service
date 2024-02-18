@@ -10,14 +10,18 @@
 <br>
 
 <img src="concept.jpg">
-<!--
-<style>
-    img {
-        -webkit-filter: invert(1);
-        filter: invert(1);
-    }
-</style>
--->
+
+<!-- INSTALLATION -->
+## Installation
+
+#### Requirements:
+- Rust
+- Protobuf
+
+#### Install Protobuf
+````shell
+choco install protoc
+````
 
 <!-- INFORMATION -->
 ## Information
