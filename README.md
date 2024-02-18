@@ -19,6 +19,15 @@
 </style>
 -->
 
+<!-- INFORMATION -->
+## Information
+
+This is a service for generating and validating license keys. <br>
+The networking is done using gRPC. 
+
+[client example](https://github.com/venotix/vlks/blob/main/examples/client/src/main.rs) <br>
+[server example](https://github.com/venotix/vlks/blob/main/examples/server/src/main.rs)
+
 <!-- ROADMAP -->
 ## Roadmap
 
